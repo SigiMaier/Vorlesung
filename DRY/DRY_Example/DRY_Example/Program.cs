@@ -27,8 +27,7 @@ namespace DRY_Example
 
         public static void WritePersonDataToScreen(string name, string job, string placeOfResidence, int age)
         {
-            Console.WriteLine($"{name} ist {job}, lebt in {placeOfResidence} und ist {age} Jahre alt",
-                name, job, placeOfResidence, age);
+            Console.WriteLine($"{name} ist {job}, lebt in {placeOfResidence} und ist {age} Jahre alt");
         }
     }
 }
