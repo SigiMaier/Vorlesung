@@ -9,7 +9,6 @@ namespace SingletonPattern
     // sealed verhindert, dass andere Klassen von dieser Klasse erben.
     public sealed class Singleton
     {
-        private static readonly Singleton instance = new Singleton();
 
         static Singleton()
         {
@@ -19,12 +18,6 @@ namespace SingletonPattern
         {
         }
 
-        public static Singleton Instance
-        {
-            get
-            {
-                return instance;
-            }
-        }
+        public static Singleton Instance { get; } = new Singleton();
     }
 }
