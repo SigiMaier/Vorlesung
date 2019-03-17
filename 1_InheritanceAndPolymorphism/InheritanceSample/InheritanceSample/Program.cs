@@ -14,7 +14,7 @@ namespace InheritanceSample
                 { Name = "Felix" }
             };
 
-            foreach (var animal in animals)
+            foreach (Animal animal in animals)
             {
                 System.Console.WriteLine(animal.Name + " make sound!");
                 animal.MakeSound();
