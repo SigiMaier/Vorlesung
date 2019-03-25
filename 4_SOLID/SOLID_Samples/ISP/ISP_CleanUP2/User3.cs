@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace ISP.ISP_CleanUP2
 {
-    class User3
+    public class User3
     {
+        private IU3Ops u3Ops = new OPS();
+
+        public void Op()
+        {
+            u3Ops.Op3();
+        }
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ISP.ISP_CleanUP2
 {
-    interface IU2Ops
+    public interface IU2Ops
     {
+        void Op2();
     }
 }
