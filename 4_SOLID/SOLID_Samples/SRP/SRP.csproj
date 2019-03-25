@@ -44,8 +44,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SRP_CleanUp2\EmployeeData.cs" />
+    <Compile Include="SRP_CleanUp2\EmployeeFacade.cs" />
+    <Compile Include="SRP_CleanUp2\EmployeeSaver.cs" />
+    <Compile Include="SRP_CleanUp2\HourReporter.cs" />
+    <Compile Include="SRP_CleanUp2\PayCalculator.cs" />
     <Compile Include="SRP_CleanUp\FileLogger.cs" />
     <Compile Include="SRP_CleanUp\User.cs" />
+    <Compile Include="SRP_Violation2\CFO.cs" />
+    <Compile Include="SRP_Violation2\COO.cs" />
+    <Compile Include="SRP_Violation2\CTO.cs" />
+    <Compile Include="SRP_Violation2\Employee.cs" />
     <Compile Include="SRP_Violation\User.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
