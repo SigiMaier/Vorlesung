@@ -49,6 +49,17 @@
     <Compile Include="IPS_CleanUP\SuperUser.cs" />
     <Compile Include="IPS_CleanUP\User.cs" />
     <Compile Include="IPS_CleanUP\UserWithRead.cs" />
+    <Compile Include="ISP_CleanUP2\IU1Ops.cs" />
+    <Compile Include="ISP_CleanUP2\IU2Ops.cs" />
+    <Compile Include="ISP_CleanUP2\IU3Ops.cs" />
+    <Compile Include="ISP_CleanUP2\OPS.cs" />
+    <Compile Include="ISP_CleanUP2\User1.cs" />
+    <Compile Include="ISP_CleanUP2\User2.cs" />
+    <Compile Include="ISP_CleanUP2\User3.cs" />
+    <Compile Include="ISP_Violation2\OPS.cs" />
+    <Compile Include="ISP_Violation2\User1.cs" />
+    <Compile Include="ISP_Violation2\User2.cs" />
+    <Compile Include="ISP_Violation2\User3.cs" />
     <Compile Include="ISP_Violation\Administrator.cs" />
     <Compile Include="ISP_Violation\FileSystem.cs" />
     <Compile Include="ISP_Violation\IDatabase.cs" />
