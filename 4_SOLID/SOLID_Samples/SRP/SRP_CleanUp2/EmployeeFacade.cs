@@ -2,10 +2,10 @@
 {
     public class EmployeeFacade
     {
-        private EmployeeData employee = new EmployeeData();
-        private PayCalculator payCalculator = new PayCalculator();
-        private HourReporter hourReporter = new HourReporter();
-        private EmployeeSaver employeeSaver = new EmployeeSaver();
+        private readonly EmployeeData employee = new EmployeeData();
+        private readonly PayCalculator payCalculator = new PayCalculator();
+        private readonly HourReporter hourReporter = new HourReporter();
+        private readonly EmployeeSaver employeeSaver = new EmployeeSaver();
 
         public void CalculatePay()
         {
