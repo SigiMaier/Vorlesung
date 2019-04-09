@@ -37,12 +37,12 @@ namespace Executable
         #region LSPCleanUp
         private static void LSP_CleanUPExecute()
         {
-            List<LSP.LSP_CleanUP.User> users = new List<LSP.LSP_CleanUP.User>()
-            {
-                new LSP.LSP_CleanUP.SuperUser(),
-                new LSP.LSP_CleanUP.Administrator(),
-                new LSP.LSP_CleanUP.FileSystem()
-            };
+            //List<LSP.LSP_CleanUP.User> users = new List<LSP.LSP_CleanUP.User>()
+            //{
+            //    new LSP.LSP_CleanUP.SuperUser(),
+            //    new LSP.LSP_CleanUP.Administrator(),
+            //    new LSP.LSP_CleanUP.FileSystem()
+            //};
         }
         #endregion
 
