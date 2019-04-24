@@ -51,21 +51,54 @@ namespace Functions
 
         private Error DeleteKey(int page)
         {
-            throw new NotImplementedException();
+            if (page == 0)
+            {
+                return Error.No;
+            }
+            else if(page == 1)
+            {
+                return Error.ReallySpecial;
+            }
+            //else
+            //{
+            //    throw new Exception();
+            //}
         }
 
         private Error DeleteReference(int page)
         {
-            throw new NotImplementedException();
+            if (page == 0)
+            {
+                return Error.No;
+            }
+            else if (page == 1)
+            {
+                return Error.ReallySpecial;
+            }
+            //else
+            //{
+            //    throw new Exception();
+            //}
         }
 
         private Error DeletePage(int page)
         {
-            throw new NotImplementedException();
+            if (page == 0)
+            {
+                return Error.No;
+            }
+            else if (page == 1)
+            {
+                return Error.ReallySpecial;
+            }
+            //else
+            //{
+            //    throw new Exception();
+            //}
         }
 
 
-        // When returning error codes, then the caller mus deal with the error immediately, see above.
+        // When returning error codes, then the caller must deal with the error immediately, see above.
         // If Exceptions are used instead, the error processing code can be seperated and the code can be simplified.
 
         public void DoSomethingBetter()

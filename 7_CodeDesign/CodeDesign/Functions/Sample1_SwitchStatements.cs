@@ -20,13 +20,13 @@ namespace Functions
                 case Employee.EmployeeType.HOURLY:
                     return this.CalculateHourlyPay(employee);
                 case Employee.EmployeeType.SALARIED:
-                    return this.CalculateAlariedPay(employee);
+                    return this.CalculateSalariedPay(employee);
                 default:
                     throw new Exception();
             }
         }
 
-        private Money CalculateAlariedPay(Employee employee)
+        private Money CalculateSalariedPay(Employee employee)
         {
             throw new NotImplementedException();
         }
@@ -159,6 +159,25 @@ namespace Functions
                     default:
                         throw new NotImplementedException();
                 }
+            }
+        }
+
+        // ---------------------------------------------------------------- //
+
+        public class sss
+        {
+            IEmployeeFactory employeeFactory = new EmployeeFactory();
+
+            public void CalculatePay()
+            {
+                EmployeeRecord record = new EmployeeRecord()
+                {
+                    Type = EmployeeRecord.EmployeeType.HOURLY
+                };
+
+                EmployeeBase employee = employeeFactory.CreateEmployee(record);
+
+                employee.CalculatePay();
             }
         }
     }
