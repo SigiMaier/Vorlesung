@@ -36,6 +36,7 @@ namespace Names
             const int NUMBER_OF_TASKS = 34;
             int realDaysPerIdealWeek = 4;
             int sum = 0;
+
             List<int> taskEstimates = new List<int>()
             {
                 1,
