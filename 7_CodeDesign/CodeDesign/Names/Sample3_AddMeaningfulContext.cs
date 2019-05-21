@@ -39,7 +39,7 @@ namespace Names
             Console.WriteLine(guessMessage);
         }
 
-        // The function name provides only öpart of the context, the algorithm provides the rest
+        // The function name provides only part of the context, the algorithm provides the rest
         // When reading through the function, there are three variables: name, verb and pluralModifier that are part of
         // "guess statistics" message. Unfortunately, the context must be inferred
 
