@@ -242,12 +242,17 @@ namespace CodeDesignExcercise
     // Step 6: Magic Numbers to Constants
     public class DiscountManagerMagicNumbersToConstants
     {
-        public decimal ApplyDiscount(decimal price, AccountStatus accountStatus, int timeOfHavingAccountInYears)
+        public decimal ApplyDiscount(
+            decimal price,
+            AccountStatus accountStatus,
+            int timeOfHavingAccountInYears)
         {
             decimal priceAfterDiscount = 0;
 
-            decimal discountForLoyaltyInPercentage = (timeOfHavingAccountInYears > Constants.MAXIMUM_DISCOUNT_FOR_LOYALITY) ?
-                (decimal)Constants.MAXIMUM_DISCOUNT_FOR_LOYALITY / 100 : (decimal)timeOfHavingAccountInYears / 100;
+            decimal discountForLoyaltyInPercentage =
+                (timeOfHavingAccountInYears > DiscountConstants.MAXIMUM_DISCOUNT_FOR_LOYALITY) ?
+                (decimal)DiscountConstants.MAXIMUM_DISCOUNT_FOR_LOYALITY / 100 :
+                (decimal)timeOfHavingAccountInYears / 100;
 
             switch (accountStatus)
             {
@@ -256,15 +261,22 @@ namespace CodeDesignExcercise
                     break;
                 case AccountStatus.SimpleCustomer:
                     priceAfterDiscount =
-                        CalculatePriceAfterDiscount(price, Constants.DISCOUNT_FOR_SIMPLE_CUSTOMERS, discountForLoyaltyInPercentage);
+                        CalculatePriceAfterDiscount(
+                            price,
+                            DiscountConstants.DISCOUNT_FOR_SIMPLE_CUSTOMERS,
+                            discountForLoyaltyInPercentage);
                     break;
                 case AccountStatus.ValuableCustomer:
                     priceAfterDiscount =
-                        CalculatePriceAfterDiscount(price, Constants.DISCOUNT_FOR_VALUABLE_CUSTOMERS, discountForLoyaltyInPercentage);
+                        CalculatePriceAfterDiscount(price,
+                        DiscountConstants.DISCOUNT_FOR_VALUABLE_CUSTOMERS,
+                        discountForLoyaltyInPercentage);
                     break;
                 case AccountStatus.MostValuableCustomer:
                     priceAfterDiscount =
-                        CalculatePriceAfterDiscount(price, Constants.DISCOUNT_FOR_MOST_VALUABLE_CUSTOMERS, discountForLoyaltyInPercentage);
+                        CalculatePriceAfterDiscount(price,
+                        DiscountConstants.DISCOUNT_FOR_MOST_VALUABLE_CUSTOMERS,
+                        discountForLoyaltyInPercentage);
                     break;
                 default:
                     throw new NotImplementedException();
@@ -292,17 +304,26 @@ namespace CodeDesignExcercise
         private readonly IAccountDiscountCalculatorFactory factory;
         private readonly ILoyaltyDiscountCalculator loyaltyDiscountCalculator;
 
-        public DiscountManager(IAccountDiscountCalculatorFactory factory, ILoyaltyDiscountCalculator loyaltyDiscountCalculator)
+        public DiscountManagerFinal(
+            IAccountDiscountCalculatorFactory factory,
+            ILoyaltyDiscountCalculator loyaltyDiscountCalculator)
         {
             this.factory = factory;
             this.loyaltyDiscountCalculator = loyaltyDiscountCalculator;
         }
 
-        public decimal ApplyDiscount(decimal price, AccountStatus accountStatus, int timeOfHavingAccountInYears)
+        public decimal ApplyDiscount(
+            decimal price,
+            AccountStatus accountStatus,
+            int timeOfHavingAccountInYears)
         {
             decimal priceAfterDiscount = 0;
-            priceAfterDiscount = factory.GetAccountDiscountCalculator(accountStatus).ApplyDiscount(price);
-            priceAfterDiscount = loyaltyDiscountCalculator.ApplyDiscount(priceAfterDiscount, timeOfHavingAccountInYears);
+
+            priceAfterDiscount =
+                factory.GetAccountDiscountCalculator(accountStatus).ApplyDiscount(price);
+            priceAfterDiscount =
+                loyaltyDiscountCalculator.ApplyDiscount(priceAfterDiscount, timeOfHavingAccountInYears);
+
             return priceAfterDiscount;
         }
     }

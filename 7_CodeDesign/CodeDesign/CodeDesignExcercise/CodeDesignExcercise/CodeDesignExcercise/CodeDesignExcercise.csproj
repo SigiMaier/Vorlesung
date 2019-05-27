@@ -43,8 +43,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountStatus.cs" />
+    <Compile Include="DefaultAccountDiscountCalculatorFactory.cs" />
+    <Compile Include="DefaultLoyaltyDiscountCalculator.cs" />
+    <Compile Include="DiscountConstants.cs" />
     <Compile Include="DiscountManagerRefactored.cs" />
     <Compile Include="DiscountManagerStartingPoint.cs" />
+    <Compile Include="IAccountDiscountCalculator.cs" />
+    <Compile Include="IAccountDiscountCalculatorFactory.cs" />
+    <Compile Include="ILoyaltyDiscountCalculator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
