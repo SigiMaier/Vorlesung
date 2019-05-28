@@ -6,7 +6,7 @@ namespace TDD_Excercise.Tests
     [TestClass]
     public class GameTest
     {
-        private Game game;
+        private readonly Game game;
 
         public GameTest()
         {
